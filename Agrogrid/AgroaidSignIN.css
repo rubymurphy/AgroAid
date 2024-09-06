@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+.all-flex {
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-sec {
+    width: 60%;
+    height: 100vh;
+    background-image: url("./IMG-20240829-WA0002\ \(1\).jpg");
+    background-size: 100% 100%;
+    background-position: relative;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.left-sec::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #102811ec,#388e3c30);
+    z-index: 1;
+}
+.leftsec-cont{
+    position: relative;
+    z-index: 2;
+     padding: 4% 5% 8% 5%;
+}
+.logo h1{
+    color: #4CAF50;
+    font-size: 40px
+}
+.logo h1 span{
+    color: #FF8C00;
+}
+.agro-text h1{
+    color: white;
+    font-size: 85px;
+    margin-top: 60px;
+    line-height: 100px;
+}
+.agro-text h2 {
+    color: white;
+     font-size: 45px; 
+    width: 80%;
+    /* line-height: 25px; */
+    margin-top: 100px;
+}
+
+
+.create {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.create-text{
+    width: 82%;
+}
+.create-text h1{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.create-text p{
+    font-size: 20px;
+}
+.create-img{
+    width: 15%;
+}
+.create-img img{
+    width: 100%;
+}
+
+.right-sec {
+    width: 30%;
+    /* height: 100vh; */
+    margin-left: 10px;
+    justify-content: center;
+    /* margin-top: 220px; */
+
+}
+.right-sec{
+    width: 35%;
+}
+.form {
+    width: 82%;
+    margin-top: 60px;
+}
+input{
+    display: block;
+}
+input[type=text] ,  input[type=password]{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 30px;
+    height: 30px;
+    font-size: 18px;
+    transition:  all .2s linear;
+}
+input[type=text]::placeholder , input[type=tel]::placeholder , input[type=password]::placeholder{
+    font-size: 18px;
+}
+input[type=text]:focus , input[type=tel]:focus , input[type=password]:focus{
+    border-bottom: 1.5px solid #4CAF50;
+}
+.forgot {
+    border: none;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+     margin-left: 60%;
+     
+      line-height: 25px; 
+     
+    
+    
+}
+.forgot a{
+    text-decoration: none;
+    color: red;
+    
+    
+}
+.google-btn{
+    width:45%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.google-img{
+    width: 20%;
+}
+.google-img img{
+    width: 100%;
+}
+.google-btn p{
+    width: 76%;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.signIn {
+    text-decoration: none;
+    background-color: #4CAF50;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    width: 40%;
+    margin: auto;
+    margin-top: 40px;
+    border-style: none;
+    color: white;
+    font: "Roboto", sans-serif;
+    margin-left: px;
+}
+.right-sec h4{
+    text-align: center;
+    margin-top: 30px;
+}
+h4 a{
+    text-decoration: none;
+}
+
+select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-bottom: 2px solid black;
+    box-sizing: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+select {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border-bottom: 2px solid black;
+    box-sizing: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+
+
+button {
+    display: block;
+}

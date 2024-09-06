@@ -5,6 +5,9 @@
     font-family: "Roboto", sans-serif;
     /* border: 1px solid red; */
 }
+button{
+    cursor: pointer;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -637,15 +640,27 @@ header{
     }
 }
 @media screen and (max-width:769px){
+    header{
+        position: relative;
+    }
     .nav-bar {
         width: 32px;
         display: block;
+    }
+    .nav-bar ul li{
+        border-bottom: 1px solid rgba(128, 128, 128, 0.829);
+        padding: 15px 0px 15px 10px;
+    }
+    .dropdown-content {
+        background-color:rgb(255, 255, 255) ;
+        z-index: 1;
     }
     .nav-bar ul{
         display: none;
     }
     .signup-cart{
         display: none;
+       
     }
     .nav-icon{
         display: block;
@@ -663,19 +678,54 @@ header{
     }
     nav input:checked ~ .cancle-nav{
         display: block;
-        animation-name:slide-out;
+        position: absolute;
+        top: 90px;
+        left: 89%;
+        z-index: 999;
+        animation-name:slide-in;
         animation-duration: 1s;
         animation-direction: alternate-reverse;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
     }
-    nav input:checked ~ .cancle-nav{
+    nav input:checked ~ ul{
         display: block;
+        position: absolute;
+        background-color: white;
+        height: 100vh;
+        width: 50%;
+        left: 50%;
+        top: 85px;
+        padding: 50px 30px 30px 30px;
+        background-color:rgba(255, 255, 255, 0.966) ;
+        box-shadow: 0px 1px 5px rgb(226, 224, 224);
         animation-name:slide-out;
         animation-duration: 1s;
-        animation-direction: alternate-reverse;
+        animation-direction: normal;
         animation-iteration-count: 1;
         animation-timing-function: ease-in-out;
+    }
+    nav input:checked ~ .signup-cart{
+        display: block;
+        position: absolute;
+        width: 30%;
+        left: 50%;
+        padding-left: 30px;
+        top: 80vh;
+        z-index: 99;
+        animation-name:slide-out;
+        animation-duration: 1s;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes slide-out{
+        0%{
+            left: 100% 
+        }
+        100%{
+            left: 50%;
+        }
     }
     .hero-section{
         height: 89vh;
@@ -940,6 +990,7 @@ header{
     }
     .about-info{
         min-height: 250px;
+        width: 100%;
     }
     .about-section h2{
         font-size: 29px;
@@ -1185,6 +1236,7 @@ header{
         width: 70%;
         padding-top: 20px;
         margin-top: 0;
+        margin: auto;
     }
     .socials i{
         font-size: 25px;
