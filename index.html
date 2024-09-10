@@ -15,50 +15,57 @@
 </head>
 
 <body>
+    <!-- header -->
     <header class="header-section">
-        <h1 class="Logo">Agro<span>Aid</span></h1>
+
+        <a href="/index.html">
+            <h1 class="Logo">Agro<span>Aid</span></h1>
+        </a>
         <nav class="nav-bar">
             <input type="checkbox" name="sidenav" id="sidenav">
             <label for="sidenav" style="font-size: 40px; color: black;" class="nav-icon">
                 <img src="./image-resources/nav.svg" alt="">
             </label>
-            <label for="sidenav" style="font-size:30px; color: var(--hero-h1);" class="cancle-nav"><i
+            <div class="nav-cont">
+                <label for="sidenav" style="font-size:30px; color: var(--hero-h1);" class="cancle-nav"><i
                     class="fas fa-xmark"></i></label>
-            <ul>
-                <li><a href="" class="link active">Home</a></li>
-                <li><a href="products.html" class="link">Products</a></li>
-                <div class="dropdown">
-                    <li><a href="" class="link">Resources <i class="fa-solid fa-angle-down"></i></a></li>
-                    <div class="dropdown-content">
-                        <a href="">Weather Update</a>
-                        <a href="">Market Place</a>
-                        <a href="">Market Price</a>
-                        <a href="">Rent/ Hire</a>
-                        <a href="">Educational resources</a>
-                        <a href="">Loan</a>
-                        <a href="">Grant</a>
+                <ul>
+                    <li><a href="" class="link active">Home</a></li>
+                    <li><a href="products.html" class="link">Products</a></li>
+                    <div class="dropdown">
+                        <li><a href="" class="link">Resources <i class="fa-solid fa-angle-down"></i></a></li>
+                        <div class="dropdown-content">
+                            <a href="">Weather Update</a>
+                            <a href="">Market Place</a>
+                            <a href="">Market Price</a>
+                            <a href="">Rent/ Hire</a>
+                            <a href="">Educational resources</a>
+                            <a href="">Loan</a>
+                            <a href="">Grant</a>
+                        </div>
                     </div>
-                </div>
-                <li><a href="" class="link">To-do</a></li>
-                <li><a href="#about" class="link">About</a></li>
-                <div class="search-item">
-                    <input type="search" name="" id="">
-                    <label for="">
-                        <img src="./image-resources/search icon.png" alt="">
-                    </label>
-                </div>
-            </ul>
-            <div class="signup-cart">
-                <div class="sign-container">
-                    <button class="signin">Sign In</button>
-                    <button onclick="document.location='./Agrogrid/AgroaidSignUp.html'" class="signup">Sign Up</button>
-                </div>
-                <div class="cart-cont">
-                    <div class="cart-img">
-                        <img src="./image-resources/cart icon.png" alt="">
+                    <li><a href="" class="link">To-do</a></li>
+                    <li><a href="#about" class="link">About</a></li>
+                    <div class="search-item">
+                        <input type="search" name="" id="">
+                        <label for="">
+                            <img src="./image-resources/search icon.png" alt="">
+                        </label>
                     </div>
-                    <div class="profile-img">
-                        <img src="./image-resources/profile-icon.png" alt="">
+                </ul>
+                <div class="signup-cart">
+                    <div class="sign-container">
+                        <button onclick="document.location='Login-signin/AgroaidSignIN.html'" class="signin">Sign In</button>
+                        <button onclick="document.location='Login-signin/AgroaidSignUp.html'" class="signup">Sign
+                            Up</button>
+                    </div>
+                    <div class="cart-cont">
+                        <div class="cart-img">
+                            <img src="./image-resources/cart icon.png" alt="">
+                        </div>
+                        <div class="profile-img">
+                            <img src="./image-resources/profile-icon.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
