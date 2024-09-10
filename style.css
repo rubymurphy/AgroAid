@@ -171,7 +171,6 @@ header{
 
 .hero-section{
     width: 100%;
-    /* height: 105vh; */
     height: 800px;
     background-image: url("./image-resources/african-man-harvesting-vegetables\ \(1\)\ \(1\).png");
     background-size: 130% 120%;
@@ -204,6 +203,9 @@ header{
 .hero-cont h1{
     font-size:80px;
     margin-bottom: 25px;
+    background-image: linear-gradient(180deg,#4caf50,#FF8c00);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .hero-cont p{
     font-size: 22px;
@@ -797,6 +799,17 @@ header{
     }
 }
 @media screen and (max-width:600px){
+    .nav-cont label{
+        display: block;
+        width: 30px;
+        font-size: 100%;
+        margin-bottom: 5px;
+        margin-left: 90%;
+        color: #FF8c00;
+    }
+    .nav-cont label i{
+        color: #FF8c00;
+    }
     .nav-bar {
         width: 32px;
         display: block;
@@ -854,6 +867,7 @@ header{
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
     }
+    nav input:checked ~ .nav-cont
     @keyframes slide-out{
         0%{
             opacity: 0;
