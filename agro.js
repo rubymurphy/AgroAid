@@ -1,48 +1,51 @@
-const homeLink = document.querySelector("#home-active");
-const heroSection = document.querySelector(".hero-section");
+const validateForm = formSelector => {
+  const formElement = document.querySelector(formSelector);  
 
-console.log(window.location);
-    
-    // console.log(window.location, e.target);
-    // (function () {
-    //     const navlinks = document.querySelectorAll('.nav-bar ul a');
-    //     navlinks.forEach(link => {
-    //         console.log(window.location.pathname === link.getAttribute('href').split('/')[1], link.getAttribute('href'));
-            
-    //         if (window.location.pathname === link.getAttribute('href').split('/')[1]) {
-    //             e.target.classList.add('active')
-    //         }
+const validationOptions = [
+  {
+    attribute: 'required' ,
+    isValid: input => input.value.trim() !== '',
+    errorMessage: (label) => `${label.textContent} is required`
+  }
+]; 
 
-    //     })
-        
-    // })()
+const validateSingleFormGroup = formGroup =>{
+  const input = formGroup.querySelector('input');
+  const label = formGroup.querySelector('label');
+  const errorContainer = formGroup.querySelector('.error-message')
+  console.log(errorContainer);
 
-    // (function () {
-    //     var current = location.pathname.split('/')[1];
-    //     if (current === "") return;
-    //     var navlinks = document.querySelectorAll('.nav-bar ul a');
-    //     for (var i = 0, len = navlinks.length; i < len; i++) {
-    //         if (navlinks[i].getAttribute("href").indexOf(current) !== -1) {
-    //             navlinks[i].className += "active";
-    //         }
-    //     }
-    // })();
-    
-    function setActive() {
-        var navlinks = document.querySelectorAll('.nav-bar ul a');
-        for(i=0;i<linkObj.length;i++) { 
-          if(document.location.href.indexOf(linkObj[i].href)>=0) {
-            linkObj[i].classList.add("active");
-          }
-        }
-      }
+  for(const option of validationOptions){
+    if(input.hasAttribute(option.attribute) && !option.isValid(input)){
+      errorContainer.textContent = option.errorMessage(label);
+    }
+  }
+  }
+
+  formElement.setAttribute('novalidate', '');
+   
+  formElement.addEventListener('submit', event =>{
+    event.preventDefault();
+    validateAllFormGroups(formElement);
+  });
+
+  const validateAllFormGroups = formToValidate => {
+    const formGroups = Array.from(formToValidate.querySelectorAll('.form-group'))
+    formGroups.forEach(formGroup =>{
+      validateSingleFormGroup(formGroup);
+      console.log('active');
+    })
+  }
+};
+validateForm(".form");
+
+
+// /   const input = formGroup.querySelector('input')
+//   const errorContainer = formGroup.querySelector('#name-error');
+
+//   for(const option of validationOptions){
+//     if(input.hasAttribute(option.attribute) && !option.isValid(input)){
+//       errorContainer.innerHtml = option.errorMessage;
+//       console.log(option);
       
-      window.onload = setActive;
-
-// if{
-//     heroSection.style.display= "block";
-//     homeLink.style.color = "blue";
-// }
-// else{
-//     homeLink.style.color = black;
-// }
+//     }
